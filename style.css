@@ -1,0 +1,152 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 15px;
+    font-family: Montserrat;
+    font-weight: 700;
+    color: #6D708D;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: #f7f7fe;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.header-name{
+    letter-spacing: 1px;
+}
+
+.toggle-wrap{
+    color: #B3B5C6;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 370px;
+    padding: 40px;
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+    display: block;
+    width: 55px;
+    height: 31px;
+	background: linear-gradient(to right ,#A3A8F0,#696FDD);
+	border-radius: 100px;
+	position: relative;
+    cursor: pointer;
+}
+
+label::after {
+	content: '';
+	position: absolute;
+	top: 2.5px;
+	left: 3px;
+	width: 25px;
+	height: 25px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.5s;
+}
+
+input:checked + label:after {
+   left: calc(100% - 3px);
+   transform: translateX(-100%);
+}
+
+
+.panel{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.pricing-plan{
+    border-radius: 10px;
+    background-color: white;
+    padding: 30px;
+    margin: 10px;
+    box-shadow: 0 0 0.5em #e1f1ff;
+}
+
+.pricing-header{
+    padding: 10px 0;
+}
+
+.pricing-price{
+    font-size: 4em;
+    padding: 20px 0;
+    color: #494C5F;
+}
+
+.pricing-features{
+     margin: 20px 0;
+}
+
+.pricing-features-item{
+    padding: 20px 0;
+    border-top: 1px solid #B3B5C6 ;
+}
+
+.pricing-features-item:last-child{
+    border-bottom: 1px solid #B3B5C6;
+}
+
+.pricing-btn{
+    background: linear-gradient(to right ,#A3A8F0,#696FDD);
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 15px 100px;
+    margin: 20px 0;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.pricing-btn:hover{
+    background: white;
+    border: 1px solid hsl(233, 13%, 49%);
+    color: hsl(233, 13%, 49%);
+}
+
+@media (min-width:900px) and (max-width:1440px){
+    .panel{ 
+         flex-direction: row;
+    }
+}
+
+.attribution {
+     font-size: 11px; text-align: center; 
+    }
+    
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+    }
